@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --Soft-Red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+
+    --Dark-Brown: hsl(25, 47%, 15%);
+    --Medium-Brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-Pale-Orange: hsl(33, 100%, 98%);
+
+    --White: hsl(0, 0%, 100%);
+}
+
+
+
+* {
+    margin: 0; 
+    padding: 0; 
+    
+    font-size: 18px; 
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    width: 100vw; 
+    height: 100vh; 
+
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--Cream);
+}
+
+hr {
+    border: none;
+    background-color: var(--Cream);
+    height: 1px;
+}
+
+main {
+
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 540px;
+    width: 540px;
+    height: 70%;
+
+    padding: 10px 10px;
+}
+
+.balance {
+
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 30px;
+    
+    background-color: var(--Soft-Red);
+
+    color: var(--White);
+
+    border-radius: 15px;
+}
+
+.balanceHeader {
+    color: var(--Cream);
+    font-weight: normal;
+}
+
+.graphContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--Very-Pale-Orange);
+
+    border-radius: 10px;
+    padding: 30px;
+    height: 540px;
+}
+
+.spendingSummaryContainer {
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.percentContainer {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 10px;
+}
+
+.lastMonthTag {
+
+    color: var(--Medium-Brown);
+    font-weight: normal;
+    font-size: 1.15em;
+}
+
+.percentHeader {
+
+    color: var(--Dark-Brown);
+    font-weight: bold;
+}
+
+.totalHeader {
+    color: var(--Medium-Brown);
+    font-weight: normal;
+
+}
+
+.totalCost {
+    color: var(--Dark-Brown);
+}
+
+.graph {
+    display: flex;    
+    color: var(--Medium-Brown);
+    font-weight: normal;
+
+    justify-content: space-between;
+    align-items: end;
+}
+
+.graphContainerHeader {
+    color: var(--Dark-Brown);
+}
+
+.graphXHeader {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.bar {
+
+    background-color: var(--Soft-Red);
+
+    border-radius: 3px;
+}
+
+.graphColumn {
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.moneyInBank {
+
+    font-weight: bold;
+}
+
+@media screen and (max-width: 550px) {
+
+    .bar {
+
+        width: 30px;
+    }
+
+    .totalCost {
+        font-size: 1.5em;
+    }
+
+    .lastMonthTag {
+        font-size: 0.75em;
+    }
+
+    .totalHeader {
+        font-size: 0.75em;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .spendingSummaryContainer {
+        padding-top: 15px;
+    }
+
+    .graphContainerHeader {
+        font-size: 1.15em;
+    }
+
+    .balanceHeader {
+        font-size: 0.75em;
+    }
+
+    .moneyInBank {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 550px) {
+
+    .bar {
+        width: 50px;
+    }
+
+    .totalCost {
+        font-size: 3em;
+    }
+
+    .totalHeader {
+        font-size: 1.15em;
+    }
+
+    .graphContainerHeader {
+        font-size: 2em;
+    }
+
+    .moneyInBank {
+        font-size: 2em;
+    }
+
+    body {
+        align-items: center;
+    }
+}
