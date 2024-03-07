@@ -142,11 +142,25 @@ main {
     font-weight: normal;
 }
 
+.hoverHidden {
+    display: none;
+}
+
+.hoverShow {
+    display: inline-block;
+}
+
 .bar {
 
     background-color: var(--Soft-Red);
 
     border-radius: 3px;
+}
+
+.bar:hover {
+    cursor: pointer;
+
+    filter: brightness(125%);
 }
 
 .graphColumn {
@@ -160,6 +174,16 @@ main {
 .moneyInBank {
 
     font-weight: bold;
+}
+
+.costHover {
+
+    position: absolute;
+    background-color: var(--Dark-Brown);
+    color: var(--White);
+
+    border-radius: 5px;
+    padding: 5px;
 }
 
 @media screen and (max-width: 550px) {
